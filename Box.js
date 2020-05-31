@@ -2,8 +2,8 @@ class Box {
     constructor(x, y, width, height) {
       var options = {
           'restitution':0.4,
-          'friction':1.5,
-          'density':1.0
+          //'friction':1.5,
+          //'density':1.0
       }
       this.body = Bodies.rectangle(x, y, width, height, options);
       this.visibility=255;
@@ -21,8 +21,9 @@ class Box {
         push();
         translate(this.body.position.x, this.body.position.y);
         rotate(angle);
-        imageMode(CENTER);
-        image(this.image, 0, 0, this.width, this.height);
+        rect(0,0,50,50);
+        //imageMode(CENTER);
+       // image(this.image, 0, 0, this.width, this.height);
         pop();
       }
 
@@ -31,7 +32,7 @@ class Box {
     push(); 
     this.visibility=this.visibility-5;
     tint(255,this.visibility);
-    image(this.image,this.body.position.x,this.body.position.y,50,50); 
+    //image(this.image,this.body.position.x,this.body.position.y,50,50); 
     pop();   
   }
     }
