@@ -132,6 +132,6 @@ function keyPressed(){
 }
 function keyPressed(){
     if(keyCode===32){
-        slingshot.attach(this.stone);
+        slingshot.attach(stone.body);
     }
 }
